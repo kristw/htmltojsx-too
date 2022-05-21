@@ -93,15 +93,14 @@ export default class HTMLtoJSX {
   level: number;
   _inPreTag: boolean;
 
-  constructor(config: ConfigType) {
-    this.config = config || {};
+  constructor(config: Partial<ConfigType> = {}) {
+    const { createClass, indent, ...rest } = config;
 
-    if (this.config.createClass === undefined) {
-      this.config.createClass = true;
-    }
-    if (!this.config.indent) {
-      this.config.indent = '  ';
-    }
+    this.config = {
+      createClass: createClass === undefined ? true : createClass,
+      indent: !indent ? '  ' : indent,
+      ...rest,
+    };
 
     this.output = '';
     this.level = 0;
