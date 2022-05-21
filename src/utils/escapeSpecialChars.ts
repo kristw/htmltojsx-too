@@ -5,8 +5,8 @@ const tempEl = createElement('div');
  * Escapes special characters by converting them to their escaped equivalent
  * (eg. "<" to "&lt;"). Only escapes characters that absolutely must be escaped.
  *
- * @param {string} value
- * @return {string}
+ * @param value
+ * @return cleaned string
  */
 export default function escapeSpecialChars(value: string) {
   // Uses this One Weird Trick to escape text - Raw text inserted as textContent

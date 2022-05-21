@@ -31,7 +31,7 @@
     "trailingComma": "es5"
   },
   "name": "html-to-jsx-lean",
-  "author": "krist-wongsuphasawat",
+  "author": "Krist Wongsuphasawat",
   "module": "dist/html-to-jsx-lean.esm.js",
   "size-limit": [
     {

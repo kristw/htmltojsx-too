@@ -1,4 +1,4 @@
-import { NODE_TYPE } from '../constants/mappings';
+import { NodeType } from '../constants/NodeType';
 import isEmpty from './isEmpty';
 
 /**
@@ -12,7 +12,7 @@ export default function onlyOneTopLevel(containerEl: Element) {
   // Only a single child element
   if (
     containerEl.childNodes.length === 1 &&
-    containerEl.childNodes[0].nodeType === NODE_TYPE.ELEMENT
+    containerEl.childNodes[0].nodeType === NodeType.ELEMENT
   ) {
     return true;
   }
@@ -20,7 +20,7 @@ export default function onlyOneTopLevel(containerEl: Element) {
   let foundElement = false;
   for (let i = 0, count = containerEl.childNodes.length; i < count; i++) {
     const child = containerEl.childNodes[i];
-    if (child.nodeType === NODE_TYPE.ELEMENT) {
+    if (child.nodeType === NodeType.ELEMENT) {
       if (foundElement) {
         // Encountered an element after already encountering another one
         // Therefore, more than one element at root level
@@ -29,7 +29,7 @@ export default function onlyOneTopLevel(containerEl: Element) {
         foundElement = true;
       }
     } else if (
-      child.nodeType === NODE_TYPE.TEXT &&
+      child.nodeType === NodeType.TEXT &&
       !isEmpty(child.textContent ?? '')
     )
       // Contains text content

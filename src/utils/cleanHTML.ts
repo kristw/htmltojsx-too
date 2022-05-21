@@ -2,8 +2,8 @@
  * Cleans up the specified HTML so it's in a format acceptable for
  * converting.
  *
- * @param {string} html HTML to clean
- * @return {string} Cleaned HTML
+ * @param html HTML to clean
+ * @return Cleaned HTML
  */
 export default function cleanHTML(html: string) {
   // Remove unnecessary whitespace

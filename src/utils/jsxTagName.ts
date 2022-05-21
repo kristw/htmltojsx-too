@@ -3,8 +3,8 @@ import { ELEMENT_TAG_NAME_MAPPING } from '../constants/mappings';
 /**
  * Convert tag name to tag name suitable for JSX.
  *
- * @param  {string} tagName  String of tag name
- * @return {string}
+ * @param  tagName  String of tag name
+ * @return
  */
 export default function jsxTagName(tagName: string) {
   var name = tagName.toLowerCase();

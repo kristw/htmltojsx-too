@@ -3,8 +3,8 @@
  * Also: the future is bright and consists of native string repetition:
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
  *
- * @param {string} str  String to repeat
- * @param {number} times   Number of times to repeat string. Integer.
+ * @param str  String to repeat
+ * @param times   Number of times to repeat string. Integer.
  * @see http://jsperf.com/string-repeater/2
  */
 export default function repeatString(str: string, times: number) {

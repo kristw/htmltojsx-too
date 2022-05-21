@@ -2,6 +2,7 @@ import {
   ATTRIBUTE_MAPPING,
   ELEMENT_ATTRIBUTE_MAPPING,
 } from '../constants/mappings';
+import { NodeType } from '../constants/NodeType';
 import cleanHTML from '../utils/cleanHTML';
 import createElement from '../utils/createElement';
 import escapeSpecialChars from '../utils/escapeSpecialChars';
@@ -18,13 +19,6 @@ export type ConfigType = {
   indent: string;
   outputClassName?: string;
 };
-
-// https://developer.mozilla.org/en-US/docs/Web/API/Node.nodeType
-const NODE_TYPE = {
-  ELEMENT: 1,
-  TEXT: 3,
-  COMMENT: 8,
-} as const;
 
 /**
  * Gets a JSX formatted version of the specified element styles
@@ -173,15 +167,15 @@ export default class HTMLtoJSX {
    */
   _beginVisit(node: Node) {
     switch (node.nodeType) {
-      case NODE_TYPE.ELEMENT:
+      case NodeType.ELEMENT:
         this._beginVisitElement(node as Element);
         break;
 
-      case NODE_TYPE.TEXT:
+      case NodeType.TEXT:
         this._visitText(node as Text);
         break;
 
-      case NODE_TYPE.COMMENT:
+      case NodeType.COMMENT:
         this._visitComment(node as Comment);
         break;
 
@@ -197,12 +191,12 @@ export default class HTMLtoJSX {
    */
   _endVisit(node: Node) {
     switch (node.nodeType) {
-      case NODE_TYPE.ELEMENT:
+      case NodeType.ELEMENT:
         this._endVisitElement(node as Element);
         break;
       // No ending tags required for these types
-      case NODE_TYPE.TEXT:
-      case NODE_TYPE.COMMENT:
+      case NodeType.TEXT:
+      case NodeType.COMMENT:
         break;
     }
   }

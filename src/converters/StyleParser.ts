@@ -69,8 +69,6 @@ export default class StyleParser {
   /**
    * Convert the style information represented by this parser into a JSX
    * string
-   *
-   * @return {string}
    */
   toJSXString() {
     return Object.entries(this.styles)
