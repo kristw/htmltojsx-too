@@ -1,10 +1,38 @@
-# TSDX User Guide
+# htmltojsx-too
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
+This package is a major update from `htmltojsx`.
 
-> This TSDX setup is meant for developing libraries (not apps!) that can be published to NPM. If you’re looking to build a Node app, you could use `ts-node-dev`, plain `ts-node`, or simple `tsc`.
+* reduce and use more recent dependencies.
+* support TypeScript.
 
-> If you’re new to TypeScript, checkout [this handy cheatsheet](https://devhints.io/typescript)
+Some of the code were modified from:
+
+* `htmltojsx@0.3.0` and its code in [reactjs/react-magic](https://github.com/reactjs/react-magic)
+* `react@15` (`HTMLDOMPropertyConfig` and `SVGDOMPropertyConfig`)
+
+Another major change is switching dependency from `jsdom-no-contexify` to `linkedom`.
+
+## Installation
+
+```sh
+npm install htmltojsx-too
+```
+
+## Usage
+
+To use the Node.js module, `require('htmltojsx-too')` and create a new instance.
+This is the same interface as the web-based version:
+
+```js
+const HTMLtoJSX = require('htmltojsx-too');
+const converter = new HTMLtoJSX({
+  createClass: true, // Set this to false if you want the output to be jsx code.
+  outputClassName: 'AwesomeComponent'
+});
+const output = converter.convert('<div>Hello world!</div>');
+```
+
+---
 
 ## Commands
 

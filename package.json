@@ -7,6 +7,13 @@
     "dist",
     "src"
   ],
+  "keywords": [
+    "html",
+    "jsx",
+    "converter",
+    "typescript",
+    "react"
+  ],
   "engines": {
     "node": ">=10"
   },
@@ -30,16 +37,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "html-to-jsx-lean",
+  "name": "htmltojsx-too",
   "author": "Krist Wongsuphasawat",
-  "module": "dist/html-to-jsx-lean.esm.js",
+  "module": "dist/htmltojsx-too.esm.js",
   "size-limit": [
     {
-      "path": "dist/html-to-jsx-lean.cjs.production.min.js",
+      "path": "dist/htmltojsx-too.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/html-to-jsx-lean.esm.js",
+      "path": "dist/htmltojsx-too.esm.js",
       "limit": "10 KB"
     }
   ],
