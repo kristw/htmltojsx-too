@@ -1,7 +1,7 @@
 # htmltojsx-too
 
 [![npm version](https://badge.fury.io/js/htmltojsx-too.svg)](https://badge.fury.io/js/htmltojsx-too)
-![CI](https://github.com/kristw/htmltojsx-too/actions/workflows/main/badge.svg)
+![CI](https://github.com/kristw/htmltojsx-too/actions/workflows/main.yml/badge.svg)
 
 This package is a major update from `htmltojsx`.
 
