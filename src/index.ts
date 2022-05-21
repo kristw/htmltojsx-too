@@ -1,1 +1,4 @@
-export { default as HTMLtoJSX } from './converters/HTMLtoJSX';
+import HTMLtoJSX from './converters/HTMLtoJSX';
+
+export { HTMLtoJSX }
+export default HTMLtoJSX;
