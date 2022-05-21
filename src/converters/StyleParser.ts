@@ -26,6 +26,15 @@ export function toJSXValue(value: string) {
     // If numeric, no quotes
     return value;
   }
+
+  const trimmedValue = value.trim();
+  if (trimmedValue.length > 2 && trimmedValue.endsWith('px')) {
+    const maybePixelValue = trimmedValue.replace('px', '');
+    if (isNumeric(maybePixelValue)) {
+      return maybePixelValue;
+    }
+  }
+
   // Probably a string, wrap it in quotes
   return "'" + value.replace(/'/g, '"') + "'";
 }
