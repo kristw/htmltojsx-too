@@ -24,15 +24,20 @@ npm install htmltojsx-too
 ## Usage
 
 To use the Node.js module, `require('htmltojsx-too')` and create a new instance.
-This is the same interface as the web-based version:
 
 ```js
-const HTMLtoJSX = require('htmltojsx-too');
+const HTMLtoJSX = require('htmltojsx-too').default;
 const converter = new HTMLtoJSX({
   createClass: true, // Set this to false if you want the output to be jsx code.
   outputClassName: 'AwesomeComponent'
 });
 const output = converter.convert('<div>Hello world!</div>');
+```
+
+For the web-based version, you can use `import`
+
+```ts
+import HTMLtoJSX from 'htmltojsx-too';
 ```
 
 ---
