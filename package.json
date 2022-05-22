@@ -24,7 +24,12 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "prepare-release": "npm run lint && npm run test && npm run build",
+    "release-patch": "npm run prepare-release && npm version patch && npm publish",
+    "release-minor": "npm run prepare-release && npm version minor && npm publish",
+    "release-major": "npm run prepare-release && npm version major && npm publish",
+    "postversion": "git push && git push --tags"
   },
   "husky": {
     "hooks": {

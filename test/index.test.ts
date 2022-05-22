@@ -1,4 +1,4 @@
-import { HTMLtoJSX } from '../src';
+import HTMLtoJSX from '../src';
 
 /**
  *  Copyright (c) 2014, Facebook, Inc.
