@@ -4,9 +4,10 @@
 ![CI](https://github.com/kristw/htmltojsx-too/actions/workflows/main.yml/badge.svg)
 
 This package is a major update from `htmltojsx`.
-
-* reduce and use more recent dependencies.
-* support TypeScript.
+Use this instead of `htmltojsx` if you
+* got security warning from `npm audit` because `htmltojsx` imports old packages
+* want TypeScript support
+* want fewer dependencies overall
 
 Some of the code were modified from:
 
