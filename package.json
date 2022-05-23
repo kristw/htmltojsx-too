@@ -48,11 +48,11 @@
   "size-limit": [
     {
       "path": "dist/htmltojsx-too.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     },
     {
       "path": "dist/htmltojsx-too.esm.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     }
   ],
   "devDependencies": {
