@@ -4,17 +4,17 @@
 ![CI](https://github.com/kristw/htmltojsx-too/actions/workflows/main.yml/badge.svg)
 
 This package is a major update from `htmltojsx`.
+
 Use this instead of `htmltojsx` if you
+
 * got security warning from `npm audit` because `htmltojsx` imports old packages
 * want TypeScript support
 * want fewer dependencies overall
 
-Some of the code were modified from:
+This package
 
-* `htmltojsx@0.3.0` and its code in [reactjs/react-magic](https://github.com/reactjs/react-magic)
-* `react@15` (`HTMLDOMPropertyConfig` and `SVGDOMPropertyConfig`)
-
-Another major change is switching dependency from `jsdom-no-contexify` to `linkedom`.
+* Reduces unnecessary dependencies. (No more pulling down `react@15` and other old dependencies that has security vulnerabilities.)
+* Provides type-safety as it was rewritten in TypeScript.
 
 ## Installation
 
@@ -40,6 +40,14 @@ For the web-based version, you can use `import`
 ```ts
 import HTMLtoJSX from 'htmltojsx-too';
 ```
+
+## More technical details
+
+Most of the code were modified from `htmltojsx@0.3.0` and its code in [reactjs/react-magic](https://github.com/reactjs/react-magic).
+
+Remove dependency to `react@15` and include its constants (`HTMLDOMPropertyConfig` and `SVGDOMPropertyConfig`) directly.
+
+Switch dependency from `jsdom-no-contexify` to `linkedom`.
 
 ---
 

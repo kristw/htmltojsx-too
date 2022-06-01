@@ -44,6 +44,11 @@
   },
   "name": "htmltojsx-too",
   "author": "Krist Wongsuphasawat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kristw/htmltojsx-too.git"
+  },
+  "homepage": "https://github.com/kristw/htmltojsx-too",
   "module": "dist/htmltojsx-too.esm.js",
   "size-limit": [
     {
